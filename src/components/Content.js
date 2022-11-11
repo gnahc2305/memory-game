@@ -18,30 +18,29 @@ const Content = () => {
   }
   createRandomNumbers();
 
-
   function onClick(e) {
-    let numberClicked = parseInt(e.target.textContent);
     // save numver clicked on the numberSelected array
+    let numberClicked = parseInt(e.target.textContent);
     setNumbers(numbersSelected.concat(numberClicked));
 
     // delete numbers and generete a new set
     numbers = [];
-    createRandomNumbers()
-
+    createRandomNumbers();
     setVisible((prev) => !prev);
-  }
 
-  // test button
-  function check() {
-    console.log(numbersSelected)
+    // check if you already clicked the number
+    numbersSelected.forEach((number) => {
+      if (numberClicked === number) {
+        alert("You Lost");
+        window.location.reload(false);
+      }
+    });
   }
-
 
   return (
     // display every number
-    <div style={{textAlign: "center"}}>
+    <div style={{ textAlign: "center" }}>
       <h3>Score: {numbersSelected.length}</h3>
-      <button onClick={check}>Test</button>
 
       <div className="content">
         {numbers.map((number) => (

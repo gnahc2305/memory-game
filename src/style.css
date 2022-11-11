@@ -23,10 +23,6 @@
     border: 5px solid black;
 }
 
-.score {
-    text-align: center;
-}
-
 .card {
     height: 100%;
     font-size: 100px;
