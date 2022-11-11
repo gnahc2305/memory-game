@@ -14,6 +14,10 @@ const App = () => {
         <Content></Content>
       </div>
 
+      <div className="score">
+        <h3>Score: <span>0</span></h3>
+      </div>
+
     </div>
   )
 }
