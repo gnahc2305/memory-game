@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import './style.css';
+import Header from "./components/Header";
+import Content from "./components/Content";
 
 const App = () => {
 
@@ -6,7 +9,11 @@ const App = () => {
 
   return(
     <div>
-    hola
+      <Header></Header>
+      <div className="container">
+        <Content></Content>
+      </div>
+
     </div>
   )
 }
