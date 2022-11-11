@@ -20,7 +20,6 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
     border: 5px solid black;
 }
 
@@ -29,6 +28,13 @@
 }
 
 .card {
-    /* background-color: grey; */
+    height: 100%;
     font-size: 100px;
+    cursor: pointer;
+    display: grid;
+    align-content: center;
+}
+
+.card:hover {
+    background-color: grey;
 }
